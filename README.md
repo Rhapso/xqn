@@ -2,8 +2,10 @@
 
 *http://localhost/Msg/chatlist*
 ### 必选输入：
-uid: uid
-cid: cid
+```
+uid
+cid
+```
 ### 可选输入：
 ### 输出：
 list
@@ -21,6 +23,7 @@ msg
 
 http://localhost/Msg/upload
 ### 必选输入：
+```
 files: {
     avatar: item.thumbPath
 },
@@ -28,6 +31,7 @@ values: {
     uid: uid,
     cid: cid
 }
+```
 ### 可选输入：
 ### 输出：
 createtime
