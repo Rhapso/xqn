@@ -12,6 +12,7 @@ cid
 list
 ```
 ### 错误信息：
+***
 
 *http://localhost/Msg/chat*
 ### 必选输入：
@@ -26,6 +27,7 @@ content
 msg
 ```
 ### 错误信息：
+***
 
 http://localhost/Msg/upload
 ### 必选输入：
@@ -46,6 +48,7 @@ url
 success
 ```
 ### 错误信息：
+***
 
 # 2.details
 
@@ -62,6 +65,7 @@ msg
 status
 ```
 ### 错误信息：
+***
 
 *{:U("xqn/Index/zan")}*
 ### 必选输入：
@@ -79,6 +83,7 @@ zan
 msg
 ```
 ### 错误信息：
+***
 
 *http://localhost/Publish/evaluate*
 ### 必选输入：
@@ -98,6 +103,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 
 # 3.editPwd
@@ -115,6 +121,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 4.find
 
@@ -135,6 +142,7 @@ JSON:[
 ]
 ```
 ### 错误信息：
+***
 
 *{:U("xqn/Index/collect")}*
 ### 必选输入：
@@ -149,12 +157,14 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 *{:U("xqn/Login/invite")}*(邀请操作，该操作被注释)
 ### 必选输入：
 ### 可选输入：
 ### 输出：
 ### 错误信息：
+***
 
 # 5.forget
 
@@ -170,6 +180,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 *http://localhost/Login/forget*
 ### 必选输入：
@@ -185,6 +196,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 6.friend_profile
 
@@ -201,6 +213,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 *{:U("xqn/Index/ceilCollect")}*
 ### 必选输入：
@@ -215,6 +228,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 *http://localhost/Upload/upload*
 ### 必选输入：
@@ -229,6 +243,7 @@ id
 msg
 ```
 ### 错误信息：
+***
 
 # 7.home
 
@@ -245,6 +260,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 *{:U("xqn/Index/zan")}*
 ### 必选输入：
@@ -262,6 +278,7 @@ msg
 zan
 ```
 ### 错误信息：
+***
 
 *http://localhost/Publish/evaluate*
 ### 必选输入：
@@ -281,6 +298,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 8.index
 
@@ -289,6 +307,7 @@ msg
 ### 可选输入：
 ### 输出：
 ### 错误信息：
+***
 
 # 9.login
 
@@ -305,6 +324,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 10.my_collect
 
@@ -321,6 +341,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 11.my_follower
 
@@ -337,6 +358,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 12.my_publish
 
@@ -354,6 +376,7 @@ success
 msg
 ```
 ### 错误信息：
+***
 
 *http://localhost/User/background*
 ### 必选输入：
@@ -370,6 +393,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 13.personal
 
@@ -386,6 +410,7 @@ id
 ]
 ```
 ### 错误信息：
+***
 
 *http://localhost/Upload/upload*
 ### 必选输入：
@@ -401,6 +426,7 @@ success
 id
 ```
 ### 错误信息：
+***
 
 *http://localhost/User/personal*
 ### 必选输入：
@@ -428,6 +454,7 @@ msg
 data
 ```
 ### 错误信息：
+***
 
 # 14.post
 
@@ -446,6 +473,7 @@ id
 url
 ```
 ### 错误信息：
+***
 
 *http://localhost/Publish/uploadVideo*
 ### 必选输入：
@@ -462,6 +490,7 @@ url
 id
 ```
 ### 错误信息：
+***
 
 *http://localhost/Publish/publish*
 ### 必选输入：
@@ -482,6 +511,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 15.profile
 
@@ -494,6 +524,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 16.publish_ajax_list
 
@@ -509,6 +540,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 17.register_more
 
@@ -525,6 +557,7 @@ id
 ]
 ```
 ### 错误信息：
+***
 
 *http://localhost/Upload/upload*
 ### 必选输入：
@@ -540,6 +573,7 @@ success
 id
 ```
 ### 错误信息：
+***
 
 *http://localhost/Register/register*
 ### 必选输入：
@@ -567,6 +601,7 @@ status
 mag
 ```
 ### 错误信息：
+***
 
 # 18.register
 
@@ -582,6 +617,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 19.report
 
@@ -601,6 +637,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 20.search_list
 
@@ -617,6 +654,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 21.search
 
@@ -633,6 +671,7 @@ list
 msg
 ```
 ### 错误信息：
+***
 
 # 22.suggest
 
@@ -649,6 +688,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 # 23.system_msg
 
@@ -664,6 +704,7 @@ status
 msg
 ```
 ### 错误信息：
+***
 
 *{:U("xqn/Msg/review")}*
 ### 必选输入：
@@ -679,6 +720,7 @@ cid
 msg
 ```
 ### 错误信息：
+***
 
 # 24.system_notice
 
@@ -694,3 +736,4 @@ status
 msg
 ```
 ### 错误信息：
+***
