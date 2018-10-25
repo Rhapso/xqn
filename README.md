@@ -1,6 +1,7 @@
 #1.chat
 
 *http://localhost/Msg/chatlist*
+
 ###必选输入：
 uid: uid
 cid: cid
