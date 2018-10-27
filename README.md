@@ -7,13 +7,13 @@
 ##### 描述
 请求对话列表
 ##### 输入
-```
+```python
 uid     // 我的用户识别码
 cid     // 好友的用户识别码
 ```
 
 ##### 输出
-```
+```python
 status // '200' means success
 list: {
     uid         //该信息包的用户识别码
@@ -29,14 +29,14 @@ list: {
 ##### 描述
 聊天发送消息
 ##### 输入
-```
+```python
 uid // 我的用户识别码
 cid // 好友的用户识别码
 content // 发送的聊天内容
 ```
 
 ##### 输出
-```
+```python
 status  //'200' means success
 1.msg: { //两种形态 当返回'200'时为
     uid         //该信息包的用户识别码
@@ -53,7 +53,7 @@ status  //'200' means success
 ##### 描述
 上传图片
 ##### 输入
-```
+```python
 files: {
     avatar  // 字符串 一张本地图片缩略图的路径
 },
@@ -64,7 +64,7 @@ values: {
 ```
 
 ##### 输出
-```
+```python
 createtime  // 字符串 创建时间
 url         // 字符串 图片链接
 success     // 字符串 '1'表示成功 其他表示失败
@@ -78,12 +78,12 @@ success     // 字符串 '1'表示成功 其他表示失败
 ##### 描述
 关注列表
 ##### 输入
-```
+```python
 uid // 我的用户识别码
 cid // 好友的用户识别码
 ```
 ##### 输出
-```
+```python
 msg     // 字符串信息
 status  // '200' means success
 ```
@@ -94,7 +94,7 @@ status  // '200' means success
 ##### 描述
 为某一消息点赞并返回点赞数
 ##### 输入
-```
+```python
 uid // 我的用户识别码 从本地cookie中提取
 pid // 也是一个识别码 指代data-id
 cid // 好友的用户识别码 指代data-cid
@@ -102,7 +102,7 @@ nickname // 我的用户昵称 从本地cookie中提取
 ```
 
 ##### 输出
-```
+```python
 status // '200' means success
 zan // html代码 替换的值 点赞的数量
 msg // 字符串 '200'或其他均有提示 是否点赞成功
@@ -114,7 +114,7 @@ msg // 字符串 '200'或其他均有提示 是否点赞成功
 ##### 描述
 评论某条消息
 ##### 输入
-```
+```python
 values: {
     content     // string 评论内容
     uid         // string
@@ -125,7 +125,7 @@ values: {
 ```
 
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // string 错误信息
 ```
@@ -138,13 +138,13 @@ msg     // string 错误信息
 ##### 描述
 修改密码
 ##### 输入
-```
+```python
 pwd // string 密码
 id  // string 用户识别码
 ```
 
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // string 成功或错误信息
 ```
@@ -157,7 +157,7 @@ msg     // string 成功或错误信息
 ##### 描述
 根据通讯录寻找朋友
 ##### 输入
-```
+```python
 一个二维数组stringfy后的JSON
 JSON:[
     [
@@ -168,7 +168,7 @@ JSON:[
 ```
 
 ##### 输出
-```
+```python
 一个字典组成的数组JSON
 [
     {
@@ -187,13 +187,13 @@ JSON:[
 ##### 描述
 关注与取关操作
 ##### 输入
-```
+```python
 uid     //
 cid     //
 ```
 
 ##### 输出
-```
+```python
 status  // '200' means 已关注成功; '300' means 已取消关注成功; 其他 means 操作失败
 msg     // string 各种情况的提示信息
 ```
@@ -213,12 +213,12 @@ msg     // string 各种情况的提示信息
 ##### 描述
 向指定手机发送验证码
 ##### 输入
-```
+```python
 mobile  // 电话号码
 ```
 
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 
 ```
@@ -229,14 +229,14 @@ msg     //
 ##### 描述
 忘记密码之后修改密码操作
 ##### 输入
-```
+```python
 mobile  // string 用户手机号
 pwd     // 新修改的密码
 code    // 验证码
 ```
 
 ##### 输出
-```
+```python
 status  // '200' means 修改成功
 msg     // string 失败信息
 ```
@@ -249,13 +249,13 @@ msg     // string 失败信息
 ##### 描述
 关注与取消操作 前已有定义
 ##### 输入
-```
+```python
 uid
 cid
 ```
 
 ##### 输出
-```
+```python
 status
 msg
 ```
@@ -266,13 +266,13 @@ msg
 ##### 描述
 取消关注 （该操作似乎与collect操作重复）
 ##### 输入
-```
+```python
 uid
 cid
 ```
 
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 错误提示信息
 ```
@@ -283,14 +283,14 @@ msg     // 错误提示信息
 ##### 描述
 上传图片
 ##### 输入
-```
+```python
 files:{
     avatar  // 图片路径
 }
 ```
 
 ##### 输出
-```
+```python
 success // '1' means success
 msg     // 提示信息
 id      // 未知用处
@@ -305,13 +305,13 @@ id      // 未知用处
 关注
 操作 之前已有定义
 ##### 输入
-```
+```python
 uid
 cid
 ```
 
 ##### 输出
-```
+```python
 status
 msg
 ```
@@ -322,7 +322,7 @@ msg
 ##### 描述
 点赞操作 之前已有定义
 ##### 输入
-```
+```python
 uid
 pid
 cid
@@ -330,7 +330,7 @@ nickname
 ```
 
 ##### 输出
-```
+```python
 status
 msg
 zan
@@ -342,7 +342,7 @@ zan
 ##### 描述
 评论内容 之前已有定义
 ##### 输入
-```
+```python
 values: {
     content :  content,
     uid :  $api.getStorage('userInfo').id,
@@ -353,7 +353,7 @@ values: {
 ```
 
 ##### 输出
-```
+```python
 status
 msg
 ```
@@ -366,11 +366,11 @@ msg
 ##### 描述
 莫名其妙的操作 实现了一个页面跳转
 ##### 输入
-```
+```python
 无
 ```
 ##### 输出
-```
+```python
 无
 ```
 ##### 报错
@@ -382,12 +382,12 @@ msg
 ##### 描述
 登陆接口
 ##### 输入
-```
+```python
 mobile  // 注册的手机号
 pwd     // 密码
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 成功或失败信息
 ```
@@ -400,12 +400,12 @@ msg     // 成功或失败信息
 ##### 描述
 取关操作
 ##### 输入
-```
+```python
 uid
 cid
 ```
 ##### 输出
-```
+```python
 status // '200' means success
 msg
 ```
@@ -418,13 +418,13 @@ msg
 ##### 描述
 关注操作 之前有定义
 ##### 输入
-```
+```python
 uid
 cid
 ```
 
 ##### 输出
-```
+```python
 status
 msg
 ```
@@ -437,14 +437,14 @@ msg
 ##### 描述
 上传文件 之前有定义
 ##### 输入
-```
+```python
 files: {
     avatar: ret.data
 }
 ```
 
 ##### 输出
-```
+```python
 success
 msg
 id
@@ -456,14 +456,14 @@ id
 ##### 描述
 更改背景图片图片中的一步
 ##### 输入
-```
+```python
 values: {
     id          // 本地用户id
     background  // 调用Upload接口后返回包中的id值
 }
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 报错信息
 ```
@@ -476,11 +476,11 @@ msg     // 报错信息
 ##### 描述
 根据城市、id、省份等返回用户列表
 ##### 输入
-```
+```python
 id  // 可选值：'1', '2', '36, $userInfo.prov, $userInfo.city
 ```
 ##### 输出
-```
+```python
 [
     [
         id,     // 用户id
@@ -495,14 +495,14 @@ id  // 可选值：'1', '2', '36, $userInfo.prov, $userInfo.city
 ##### 描述
 上传文件 之前已有定义
 ##### 输入
-```
+```python
 files: {
     avatar: ret.data
 }
 ```
 
 ##### 输出
-```
+```python
 success
 id
 ```
@@ -513,7 +513,7 @@ id
 ##### 描述
 注册接口
 ##### 输入
-```
+```python
 values: {
     id          // uid 此处注意 这个不是用户自己填写的 请后端同学帮忙看看uid的生成机制
     avatar      // 上传文件后返回的id
@@ -530,7 +530,7 @@ values: {
 }
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 成功或报错信息
 data    // 数据包，用于存入cookie
@@ -544,14 +544,14 @@ data    // 数据包，用于存入cookie
 ##### 描述
 上传文件 之前已有定义
 ##### 输入
-```
+```python
 files: {
     avatar: item.thumbPath
 }
 ```
 
 ##### 输出
-```
+```python
 success
 id
 url
@@ -563,14 +563,14 @@ url
 ##### 描述
 上传视频
 ##### 输入
-```
+```python
 files: {
     avatar  // 文件路径
 }
 ```
 
 ##### 输出
-```
+```python
 success // '1' means success
 url     // 视频链接
 id      // 未知用处
@@ -582,7 +582,7 @@ id      // 未知用处
 ##### 描述
 发表动态接口
 ##### 输入
-```
+```python
 values: {
     content     // string 朋友圈内容
     uid         // string 用户id
@@ -593,7 +593,7 @@ values: {
 }
 ```
 ##### 输出
-```
+```python
 status  // '200'  means success
 msg     // string 成功或报错信息
 ```
@@ -608,7 +608,7 @@ msg     // string 成功或报错信息
 ##### 输入
 无
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 报错信息
 ```
@@ -621,11 +621,11 @@ msg     // 报错信息
 ##### 描述
 删除这条说说接口
 ##### 输入
-```
+```python
 id  // 应当是这条说说的id
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 成功或报错信息
 ```
@@ -638,11 +638,11 @@ msg     // 成功或报错信息
 ##### 描述
 根据城市、id、省份等返回用户列表 之前已有定义
 ##### 输入
-```
+```python
 id
 ```
 ##### 输出
-```
+```python
 [
   {id: , name: }, ...
 ]
@@ -654,13 +654,13 @@ id
 ##### 描述
 上传文件 之前已有定义
 ##### 输入
-```
+```python
 files: {
     avatar: ret.data
 }
 ```
 ##### 输出
-```
+```python
 success
 id
 ```
@@ -671,7 +671,7 @@ id
 ##### 描述
 注册接口2 （不知道为什么搞了两个接口）
 ##### 输入
-```
+```python
 values: {
     mobile      // 电话号码
     pwd         // 密码
@@ -689,7 +689,7 @@ values: {
 }
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 mag     // 成功或报错信息
 ```
@@ -702,11 +702,11 @@ mag     // 成功或报错信息
 ##### 描述
 判断是否已注册
 ##### 输入
-```
+```python
 mobile  // 手机号
 ```
 ##### 输出
-```
+```python
 status  // '200' means 该手机号已被注册
 msg     // 报错信息
 ```
@@ -719,7 +719,7 @@ msg     // 报错信息
 ##### 描述
 举报某位用户
 ##### 输入
-```
+```python
 values: {
     reason      // string 理由
     uid         // 本人用户id
@@ -727,7 +727,7 @@ values: {
 }
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 成功或报错信息
 ```
@@ -740,12 +740,12 @@ msg     // 成功或报错信息
 ##### 描述
 关注操作 之前有定义
 ##### 输入
-```
+```python
 uid
 cid
 ```
 ##### 输出
-```
+```python
 status
 msg 
 ```
@@ -758,11 +758,11 @@ msg
 ##### 描述
 搜索某关键词
 ##### 输入
-```
+```python
 keyword // string 关键词
 ```
 ##### 输出
-```
+```python
 status  // '200' means success 
 list    // type 未知 结果列表
 msg     // 报错信息
@@ -776,12 +776,12 @@ msg     // 报错信息
 ##### 描述
 在线提建议
 ##### 输入
-```
+```python
 content // 建议内容
 tel     // 电话号码 
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 成功或报错信息
 ```
@@ -794,11 +794,11 @@ msg     // 成功或报错信息
 ##### 描述
 给出一个信息id，返回状态，是其他操作的验证
 ##### 输入
-```
+```python
 id  // 消息的识别码
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 报错信息
 ```
@@ -809,14 +809,14 @@ msg     // 报错信息
 ##### 描述
 
 ##### 输入
-```
+```python
 eid     // 与Msg/read接口的id是一个字段 即消息的识别码
 content // 回复的内容
 uid     // 用户id
 cid     // 目标用户id
 ```
 ##### 输出
-```
+```python
 msg // 返回信息
 ```
 ##### 报错
@@ -828,11 +828,11 @@ msg // 返回信息
 ##### 描述
 给定一个信息id，返回状态
 ##### 输入
-```
+```python
 id  // 即消息的识别码
 ```
 ##### 输出
-```
+```python
 status  // '200' means success
 msg     // 报错信息
 ```
