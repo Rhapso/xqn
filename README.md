@@ -8,21 +8,26 @@
 请求对话列表
 ##### 输入
 ```javascript
-uid     // 我的用户识别码
-cid     // 好友的用户识别码
+uid     // 我的用户id
+cid     // 好友的用户id
 ```
 
 ##### 输出
 ```javascript
 status // '200' means success
 list: {
-    uid         //该信息包的用户识别码
+    uid         //该信息包的用户id
     createtime  //创建时间
     content     //内容
     pic         //图片的url
 }
 ```
 ##### 报错
+##### 测试用例
+```javascript
+http://localhost/Xqn/Msg/chatlist?uid=1&cid=10
+```
+
 ***
 
 *http://localhost/Xqn/Msg/chat*
@@ -30,8 +35,8 @@ list: {
 聊天发送消息
 ##### 输入
 ```javascript
-uid // 我的用户识别码
-cid // 好友的用户识别码
+uid // 我的用户id
+cid // 好友的用户id
 content // 发送的聊天内容
 ```
 
@@ -39,7 +44,7 @@ content // 发送的聊天内容
 ```javascript
 status  //'200' means success
 1.msg: { //两种形态 当返回'200'时为
-    uid         //该信息包的用户识别码
+    uid         //该信息包的用户id
     createtime  //创建时间
     content     //内容
     pic         //图片的url
@@ -47,6 +52,11 @@ status  //'200' means success
 2.msg // status不为'200'时的字符串错误信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+http://localhost/Xqn/Msg/chat?uid=1&cid=10&content='hahah'
+```
+
 ***
 
 *http://localhost/Msg/upload*
@@ -58,8 +68,8 @@ files: {
     avatar  // 字符串 一张本地图片缩略图的路径
 },
 values: {
-    uid     // 我的用户识别码
-    cid     // 好友的用户识别码
+    uid     // 我的用户id
+    cid     // 好友的用户id
 }
 ```
 
@@ -70,6 +80,11 @@ url         // 字符串 图片链接
 success     // 字符串 '1'表示成功 其他表示失败
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 2.details
@@ -79,8 +94,8 @@ success     // 字符串 '1'表示成功 其他表示失败
 关注列表
 ##### 输入
 ```javascript
-uid // 我的用户识别码
-cid // 好友的用户识别码
+uid // 我的用户id
+cid // 好友的用户id
 ```
 ##### 输出
 ```javascript
@@ -88,6 +103,11 @@ msg     // 字符串信息
 status  // '200' means success
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Index/zan*
@@ -95,9 +115,9 @@ status  // '200' means success
 为某一消息点赞并返回点赞数
 ##### 输入
 ```javascript
-uid // 我的用户识别码 从本地cookie中提取
-pid // 也是一个识别码 指代data-id
-cid // 好友的用户识别码 指代data-cid
+uid // 我的用户id 从本地cookie中提取
+pid // 也是一个id 指代data-id
+cid // 好友的用户id 指代data-cid
 nickname // 我的用户昵称 从本地cookie中提取
 ```
 
@@ -108,6 +128,11 @@ zan // html代码 替换的值 点赞的数量
 msg // 字符串 '200'或其他均有提示 是否点赞成功
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Publish/evaluate*
@@ -130,6 +155,11 @@ status  // '200' means success
 msg     // string 错误信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 3.editPwd
@@ -140,7 +170,7 @@ msg     // string 错误信息
 ##### 输入
 ```javascript
 pwd // string 密码
-id  // string 用户识别码
+id  // string 用户id
 ```
 
 ##### 输出
@@ -149,6 +179,11 @@ status  // '200' means success
 msg     // string 成功或错误信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 4.find
@@ -181,6 +216,11 @@ JSON:[
 ]
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Index/collect")}*
@@ -198,6 +238,11 @@ status  // '200' means 已关注成功; '300' means 已取消关注成功; 其�
 msg     // string 各种情况的提示信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *{:U("xqn/Login/invite")}*(邀请操作，该操作被注释)
@@ -205,6 +250,11 @@ msg     // string 各种情况的提示信息
 ##### 输入
 ##### 输出
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 5.forget
@@ -223,6 +273,11 @@ status  // '200' means success
 msg     // 
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Login/forget*
@@ -241,6 +296,11 @@ status  // '200' means 修改成功
 msg     // string 失败信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 6.friend_profile
@@ -260,6 +320,11 @@ status
 msg
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Index/ceilCollect")}*
@@ -277,6 +342,11 @@ status  // '200' means success
 msg     // 错误提示信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Upload/upload*
@@ -296,6 +366,11 @@ msg     // 提示信息
 id      // 未知用处
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 7.home
@@ -316,6 +391,11 @@ status
 msg
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Index/zan*
@@ -336,6 +416,11 @@ msg
 zan
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Publish/evaluate*
@@ -358,6 +443,11 @@ status
 msg
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 8.index
@@ -374,6 +464,11 @@ msg
 无
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 9.login
@@ -392,6 +487,11 @@ status  // '200' means success
 msg     // 成功或失败信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 10.my_collect
@@ -410,6 +510,11 @@ status // '200' means success
 msg
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 11.my_follower
@@ -429,6 +534,11 @@ status
 msg
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 12.my_publish
@@ -450,6 +560,11 @@ msg
 id
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/User/background*
@@ -468,6 +583,11 @@ status  // '200' means success
 msg     // 报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 13.personal
@@ -489,6 +609,11 @@ id  // 可选值：'1', '2', '36, $userInfo.prov, $userInfo.city
 ]
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Upload/upload*
@@ -507,6 +632,11 @@ success
 id
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/User/personal*
@@ -536,6 +666,11 @@ msg     // 成功或报错信息
 data    // 数据包，用于存入cookie
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 14.post
@@ -557,6 +692,11 @@ id
 url
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Publish/uploadVideo*
@@ -576,6 +716,11 @@ url     // 视频链接
 id      // 未知用处
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Publish/publish*
@@ -598,6 +743,11 @@ status  // '200'  means success
 msg     // string 成功或报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 15.profile
@@ -613,6 +763,11 @@ status  // '200' means success
 msg     // 报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 16.publish_ajax_list
@@ -630,6 +785,11 @@ status  // '200' means success
 msg     // 成功或报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 17.register_more
@@ -648,6 +808,11 @@ id
 ]
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Upload/upload*
@@ -665,6 +830,11 @@ success
 id
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Register/register*
@@ -694,6 +864,11 @@ status  // '200' means success
 mag     // 成功或报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 18.register
@@ -711,6 +886,11 @@ status  // '200' means 该手机号已被注册
 msg     // 报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 19.report
@@ -732,6 +912,11 @@ status  // '200' means success
 msg     // 成功或报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 20.search_list
@@ -750,6 +935,11 @@ status
 msg 
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 21.search
@@ -768,6 +958,11 @@ list    // type 未知 结果列表
 msg     // 报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 22.suggest
@@ -786,16 +981,21 @@ status  // '200' means success
 msg     // 成功或报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 23.system_msg
 
-*http://localhost/Xqn/Msg/read")}*
+*http://localhost/Xqn/Msg/read*
 ##### 描述
 给出一个信息id，返回状态，是其他操作的验证
 ##### 输入
 ```javascript
-id  // 消息的识别码
+id  // 消息的id
 ```
 ##### 输出
 ```javascript
@@ -803,6 +1003,11 @@ status  // '200' means success
 msg     // 报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 *http://localhost/Xqn/Msg/review*
@@ -810,7 +1015,7 @@ msg     // 报错信息
 
 ##### 输入
 ```javascript
-eid     // 与Msg/read接口的id是一个字段 即消息的识别码
+eid     // 与Msg/read接口的id是一个字段 即消息的id
 content // 回复的内容
 uid     // 用户id
 cid     // 目标用户id
@@ -820,6 +1025,11 @@ cid     // 目标用户id
 msg // 返回信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
 
 # 24.system_notice
@@ -829,7 +1039,7 @@ msg // 返回信息
 给定一个信息id，返回状态
 ##### 输入
 ```javascript
-id  // 即消息的识别码
+id  // 即消息的id
 ```
 ##### 输出
 ```javascript
@@ -837,4 +1047,9 @@ status  // '200' means success
 msg     // 报错信息
 ```
 ##### 报错
+##### 测试用例
+```javascript
+
+```
+
 ***
