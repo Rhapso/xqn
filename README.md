@@ -25,7 +25,7 @@ list: {
 ##### 报错
 ##### 测试用例
 ```javascript
-http://localhost/Xqn/Msg/chatlist?uid=1&cid=10
+http://localhost/Xqn/Msg/chatlist?uid=1&cid=8
 ```
 
 ***
@@ -223,7 +223,7 @@ JSON:[
 
 ***
 
-*http://localhost/Xqn/Index/collect")}*
+*http://localhost/Xqn/Index/collect*
 ##### 描述
 关注与取关操作
 ##### 输入
@@ -327,7 +327,7 @@ msg
 
 ***
 
-*http://localhost/Xqn/Index/ceilCollect")}*
+*http://localhost/Xqn/Index/ceilCollect*
 ##### 描述
 取消关注 （该操作似乎与collect操作重复）
 ##### 输入
